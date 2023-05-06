@@ -1,0 +1,21 @@
+class Solution {
+public:
+ int isvowel(char c)
+      {
+       if(c=='a'||c=='e'||c=='i'||c=='o'||c=='u')
+         return 1;
+         return 0;
+      } 
+    int maxVowels(string s, int k) {
+        int i,csum=0,maxsum=0;
+    for(i=0;i<s.size();i++)
+    {
+   csum+=isvowel(s[i]);
+    if(i>=k)
+    csum-=isvowel(s[i-k]);
+    maxsum=max(maxsum,csum);
+
+    }
+    return maxsum;
+    }
+};
