@@ -1,0 +1,19 @@
+# DAILY-CODES
+WE HAD TO RETURN THE SORTED ARRAY AFTER SQUARING UP THE ELEMENTS OF THE ARRAY
+
+class Solution {
+public:
+    vector<int> sortedSquares(vector<int>& nums) {
+        int i=0,j=nums.size()-1,k=0;
+        vector<int>ans(nums.size());
+        while(i<=j)
+        {
+            if (abs(nums[i])>abs(nums[j]))
+            ans[k++]=nums[i]*nums[i++];
+            else 
+            ans[k++]=nums[j]*nums[j--];
+        }
+reverse(ans.begin(),ans.end());
+        return ans;
+    }
+};
