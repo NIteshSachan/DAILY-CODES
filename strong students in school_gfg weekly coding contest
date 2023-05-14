@@ -1,0 +1,17 @@
+# DAILY-CODES
+have to return the difference of the performances of strong students against the poor students
+
+int diffSum(int n,int m,int arr[])
+{
+int i=0,sum1=0,sum2=0,j=n-1;
+sort(arr,arr+n);
+while(i<m && j>n-m-1)
+{
+sum1+=arr[i++];
+sum2+=arr[j--];
+}
+    
+    return sum2-sum1;
+    //write your code here
+    
+}
